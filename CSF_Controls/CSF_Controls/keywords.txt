@@ -1,0 +1,38 @@
+#######################################
+# Syntax Coloring Map For AB_Control
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+ControlUnit		KEYWORD1
+Pot				KEYWORD1
+
+
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin				KEYWORD2
+getSensorData		KEYWORD2
+toggleIsSensorOn	KEYWORD2
+getIsSensorOn		KEYWORD2
+activateControl		KEYWORD2
+deactivateControl	KEYWORD2
+isButtonPressed		KEYWORD2
+mapData				KEYWORD2
+
+
+
+
+
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+#######################################
+# Constants (LITERAL1)
+#######################################
