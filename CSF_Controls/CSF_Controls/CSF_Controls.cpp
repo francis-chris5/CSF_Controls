@@ -93,31 +93,3 @@ int Pot::mapData(int min, int max){
 	return signal;
 }//end mapData(ints)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
