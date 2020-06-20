@@ -10,15 +10,9 @@
 #include <CSF_Controls.h>
 
 
-/**
- * Object representing the rotary potentiometer and associated components
- */
-Pot rotary = Pot(2, 3, A0);
 
-/**
- * Object representing the slide potentiometer and associated components
- */
-Pot slider = Pot(5, 6, A2);
+Pot rotary = Pot(2, 3, A0); ///<Object representing the rotary potentiometer and associated components
+Pot slider = Pot(5, 6, A2); ///<Object representing the slide potentiometer and associated components
 
 
 /**
