@@ -9,6 +9,7 @@
 
 #include <CSF_Controls.h>
 
+using namespace Sensors;
 
 
 Pot rotary = Pot(2, 3, A0); ///<Object representing the rotary potentiometer and associated components
@@ -41,11 +42,13 @@ void loop() {
   if(rotary.getIsSensorOn()){
     rotary.activateControl();
     Serial.print("rotary pot: ");
-    Serial.print(rotary.getSensorValue());
-    Serial.print(", ");
+    //rotary.toSerial();  //uncomment this line and comment out next four to see unmapped data
+    
     float negPI = -3.14;
     float posPI = 3.14;
-    Serial.println(rotary.mapData(negPI, posPI));
+    rotary.mapData(negPI, posPI);
+    rotary.toSerial();
+    
   }
   else{
     rotary.deactivateControl();
@@ -55,9 +58,11 @@ void loop() {
   if(slider.getIsSensorOn()){
     slider.activateControl();
     Serial.print("slider pot: ");
-    Serial.print(slider.getSensorValue());
-    Serial.print(", ");
-    Serial.println(slider.mapData(24, 38));
+    //slider.toSerial();  //uncomment this line and comment out the next two to see mapped data
+    
+    slider.mapData(24, 38);
+    slider.toSerial();
+    
   }
   else{
     slider.deactivateControl();

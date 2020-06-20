@@ -23,7 +23,7 @@ activateControl		KEYWORD2
 deactivateControl	KEYWORD2
 isButtonPressed		KEYWORD2
 mapData				KEYWORD2
-
+toSerial			KEYWORD2
 
 
 
