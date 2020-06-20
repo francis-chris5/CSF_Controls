@@ -4,7 +4,6 @@
  
 #include "CSF_Controls.h"
 #include "Arduino.h"
-#include "HardwareSerial.h"
 
 
 //ControlUnit
@@ -82,12 +81,8 @@ int Pot::getSensorValue(){
 
 float Pot::mapData(float min, float max){
 	int signal = getSensorValue();
-	//Serial.println(min);
-	//Serial.println(max);
 	signal = map(signal, 0, 1024, (int)(min * 10000), (int)(max * 10000));
-	//Serial.println(signal);
 	float fSignal = signal / 10000.0;
-	//Serial.print(signal);
 	return fSignal;
 }//end mapData(floats)
 
