@@ -4,5 +4,6 @@ CSF_Controls is a C++ library designed to consolidate the coding for some common
 
 The Doxygen generated documentation pages can be found at: https://francis-chris5.github.io/CSF_Controls/html/index.html. The C++ documentation can be found under the class tabs, and the documentation for the Arduino example making use of it is found under the files tab.
 
+A zip folder containing the library to install in your Arduino IDE, and an example making use of it can be found on this repository at CSF_Controls/CSF_Controls.
 
  
