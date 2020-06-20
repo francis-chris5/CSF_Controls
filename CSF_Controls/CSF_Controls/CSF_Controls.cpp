@@ -8,6 +8,7 @@
 
 
 using namespace Sensors;
+using namespace Switches;
 
 //ControlUnit
 
@@ -125,4 +126,117 @@ void Pot::toSerial(){
 		Serial.println(output);
 	}
 }//end toSerial()
+
+
+
+
+
+// Button
+
+Button::Button(int p){
+	pin = p;
+}//end constructor()
+
+
+void Button::begin(){
+	pinMode(pin, INPUT);
+}//end begin()
+
+
+int Button::getState(){
+	return digitalRead(pin);
+}//end getButtonState()
+
+
+int Button::getState(bool condition){
+	if(condition){
+		return digitalRead(pin);
+	}
+}//end getButtonState(bool)
+
+
+void Button::toSerial(){
+	Serial.println(getState());
+}//end toSerial()
+
+
+void Button::toSerial(bool condition){
+	Serial.println(getState(condition));
+}//end toSerial(bool);
+
+
+
+
+
+
+
+//Momentary
+
+int Momentary::getState(){
+	long currentTime = millis();
+	if( (currentTime - previousTime) >= interval){
+		previousTime = millis();
+		return digitalRead(pin);
+	}
+}//end getState()
+
+int Momentary::getState(bool condition){
+	long currentTime = millis();
+	if( (currentTime - previousTime) >= interval){
+		previousTime = millis();
+		if(condition){
+			return digitalRead(pin);
+		}
+	}
+}//end getState(bool)
+
+/*
+void Momentary::toSerial(){
+	Serial.println(getState());
+}//end toSerial()
+
+
+void Momentary::toSerial(bool condition){
+	Serial.println(getState(condition));
+}//end toSerial(bool);
+*/
+
+
+
+
+
+
+
+// Touch
+
+int Touch::getState(){
+	long currentTime = millis();
+	if( (currentTime - previousTime) >= interval){
+		previousTime = millis();
+		return digitalRead(pin);
+	}
+}//end getState()
+
+int Touch::getState(bool condition){
+	long currentTime = millis();
+	if( (currentTime - previousTime) >= interval){
+		previousTime = millis();
+		if(condition){
+			return digitalRead(pin);
+		}
+	}
+}//end getState(bool)
+
+
+
+/*
+void Touch::toSerial(){
+	Serial.println(getState());
+}//end toSerial()
+
+
+void Touch::toSerial(bool condition){
+	Serial.println(getState(condition));
+}//end toSerial(bool);
+*/
 

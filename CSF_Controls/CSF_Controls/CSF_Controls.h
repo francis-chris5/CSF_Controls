@@ -193,6 +193,171 @@ namespace Sensors{
 namespace Switches{
 	
 	
+	/**
+	 * This is the parent object for tactile switches and touch sensors which will essentially be used as On/Off switches.\n
+	 * Essentially this just returns the On/Off state of the switch/sensor as an int \(1 when pressed, 0 otherwise\).
+	 */
+	class Button{
+		public:
+			/**
+			 * The constructor for ControlButton class
+			 * @param p -The Arduino pin the momentary-switch/touch-sensor is connected to
+			 */
+			Button(int p);
+			
+			
+			/**
+			 * Initializes all variables and assigns INPUT/OUTPUT to the connections on the scale controls, i.e. the pinMode\(i, m\) method for Arduino\n
+			 * Call this method in the setup\(\) method in the .ino file
+			 */
+			void begin(void);
+			
+			
+			
+			/**
+			 * gets the current state of the button 
+			 * @return int -a 1 if currently being pressed/touched, and 0 otherwise
+			 */
+			int getState();
+			
+			
+			
+			/**
+			 * gets the current state of the button 
+			 * @param condition -a boolean approving the activation of this button \(for example, I often combine features to a common potentiometer, and want to be certain that the other use of the sensor is not running before I turn this one on\). In most cases just pass in the word true though.
+			 * @return int -a 1 if currently being pressed/touched, and 0 otherwise
+			 */
+			int getState(bool condition);
+			
+			
+			/**
+			 * I often find my ideas for Arduino projects are input devices (essentially a customized keyboard or mouse override) for software running on my PC. This is typically handled with bits of code written in python making use of the libraries pyserial and pyautogui.\n
+			 * This method is encapsulates sending the data to the serial port for that purpose, in this case it sends a true/false value to represent whether the button is currently activated \(pressed or touched, etc.\) or not.\n
+			 * see getState\(\) about the overloading
+			 */
+			void toSerial(void);
+			
+			
+			/**
+			 * I often find my ideas for Arduino projects are input devices (essentially a customized keyboard or mouse override) for software running on my PC. This is typically handled with bits of code written in python making use of the libraries pyserial and pyautogui.\n
+			 * This method is encapsulates sending the data to the serial port for that purpose, in this case it sends a true/false value to represent whether the button is currently activated \(pressed or touched, etc.\) or not.\n
+			 * see getState\(\) about the overloading
+			 */
+			void toSerial(bool condition);
+		protected:
+			int pin;	///<The arduino pin the button/touch-sensor is connected to
+	};
+
+
+
+
+
+
+
+
+
+
+	/**
+	 * The subclass of Button specialized for Taactile-Momentary-Switches. If such a setup is used as a regular "Button" make sure to include a timer to avoid spamming the On/Off states at every pulse of the processor's clock.\n
+	 * <IMG src="../images/tactile_button_circuit.png">
+	 */
+	class Momentary: public Button{
+		public:
+			/**
+			 * The constructor for Momentary objects.
+			 * @param p -the Arduino pin the signal from the tactile-momentary-switch will be received on
+			 */
+			Momentary(int p): Button(p){};
+			
+			
+			
+			/**
+			 * Overrides getState\(\) from Button class with a timer to avoid spamming the tactile momentary switch and toggling the On/Off state with every pusle of the processor's clock the button is held down for.
+			 * @return int -a 1 if currently being pressed/touched, and 0 otherwise
+			 */
+			 int getState();
+			
+			
+			
+			/**
+			 * Overrides getState\(\) from Button class with a timer to avoid spamming the tactile momentary switch with every pusle of the processor's clock the button is held down for.
+			 * @param condition -a boolean approving the activation of this button \(for example, I often combine features to a common potentiometer, and want to be certain that the other use of the sensor is not running before I turn this one on\). In most cases just pass in the word true though.
+			 * @return int -a 1 if currently being pressed/touched, and 0 otherwise
+			 */
+			 int getState(bool condition);
+			 
+			 
+			 
+			 /**
+			 * I often find my ideas for Arduino projects are input devices (essentially a customized keyboard or mouse override) for software running on my PC. This is typically handled with bits of code written in python making use of the libraries pyserial and pyautogui.\n
+			 * This method is encapsulates sending the data to the serial port for that purpose, in this case it sends a true/false value to represent whether the button is currently activated \(pressed or touched, etc.\) or not.\n
+			 * see getState\(\) about the overloading
+			 */
+			//void toSerial(void);
+			
+			
+			/**
+			 * I often find my ideas for Arduino projects are input devices (essentially a customized keyboard or mouse override) for software running on my PC. This is typically handled with bits of code written in python making use of the libraries pyserial and pyautogui.\n
+			 * This method is encapsulates sending the data to the serial port for that purpose, in this case it sends a true/false value to represent whether the button is currently activated \(pressed or touched, etc.\) or not.\n
+			 * see getState\(\) about the overloading
+			 */
+			//void toSerial(bool condition);
+		private:
+			long interval;	///< The amount of time to wait between checking presses of buttons
+			long previousTime;	///< The unix epoch timestamp on last pass of the program's main loop
+	};
+
+
+	/**
+	 * The subclass of Button specialized for Taactile-Momentary-Switches. If such a setup is used as a regular "Button" make sure to include a timer to avoid spamming the On/Off states at every pulse of the processor's clock.\n
+	 * This is what I use this with the prebuilt capacitive touch sensor modules, and not a custom capacitive touch sensor
+	 */
+	class Touch: public Button{
+		public:
+			/**
+			 * The constructor for Touch objects.
+			 * @param p -the Arduino pin the signal from the capacitive-touch-sensor-module will be received on
+			 */
+			Touch(int p): Button(p){};
+			
+			
+			
+			/**
+			 * Overrides getState\(\) from Button class with a timer to avoid spamming the touch sensor and toggling the On/Off state with every pusle of the processor's clock the button is held down for.
+			 * @return int -a 1 if currently being pressed/touched, and 0 otherwise
+			 */
+			 int getState();
+			
+			
+			
+			/**
+			 * Overrides getState\(\) from Button class with a timer to avoid spamming the tactile momentary switch with every pusle of the processor's clock the button is held down for.
+			 * @param condition -a boolean approving the activation of this button \(for example, I often combine features to a common potentiometer, and want to be certain that the other use of the sensor is not running before I turn this one on\). In most cases just pass in the word true though.
+			 * @return int -a 1 if currently being pressed/touched, and 0 otherwise
+			 */
+			 int getState(bool condition);
+			 
+			 
+			 
+			 /**
+			 * I often find my ideas for Arduino projects are input devices (essentially a customized keyboard or mouse override) for software running on my PC. This is typically handled with bits of code written in python making use of the libraries pyserial and pyautogui.\n
+			 * This method is encapsulates sending the data to the serial port for that purpose, in this case it sends a true/false value to represent whether the button is currently activated \(pressed or touched, etc.\) or not.\n
+			 * see getState\(\) about the overloading
+			 */
+			//void toSerial(void);
+			
+			
+			/**
+			 * I often find my ideas for Arduino projects are input devices (essentially a customized keyboard or mouse override) for software running on my PC. This is typically handled with bits of code written in python making use of the libraries pyserial and pyautogui.\n
+			 * This method is encapsulates sending the data to the serial port for that purpose, in this case it sends a true/false value to represent whether the button is currently activated \(pressed or touched, etc.\) or not.\n
+			 * see getState\(\) about the overloading
+			 */
+			//void toSerial(bool condition);
+		private:
+			long interval;	///< The amount of time to wait between checking presses of buttons
+			long previousTime;	///< The unix epoch timestamp on last pass of the program's main loop
+	};
+
 	
 	
 	

@@ -6,8 +6,14 @@
 # Datatypes (KEYWORD1)
 #######################################
 
+Sensors			KEYWORD1
+Switches		KEYWORD1
+
 ControlUnit		KEYWORD1
 Pot				KEYWORD1
+Button			KEYWORD1
+Momentary		KEYWORD1
+Touch			KEYWORD1
 
 
 
@@ -24,6 +30,7 @@ deactivateControl	KEYWORD2
 isButtonPressed		KEYWORD2
 mapData				KEYWORD2
 toSerial			KEYWORD2
+getState			KEYWORD2
 
 
 
