@@ -12,12 +12,12 @@
 using namespace Switches;
 
 
-Momentary clicker = Momentary(2);
-Touch zone = Touch(5);
+Momentary clicker = Momentary(2); ///< Object representing the tactile-momentary-switch circuit
+Touch zone = Touch(5);  ///< Object representing the capacitive-touch-sensor-module
 
 /**
  * The standard setup\(\) method for arduino\n
- * For this example it intializes the serial communication port and initializes the Pot objects
+ * For this example it intializes the serial communication port and initializes the Button-Subclass objects
  */
 void setup() {
   Serial.begin(9600);
@@ -31,7 +31,7 @@ void setup() {
 
 /**
  * The standard loop\(\) method for Arduinon
- * Here it checks if the sensor needs activated/deactivated, and if it's on prints the values to the serial port and a couple blank lines.
+ * Here it checks if the sensor needs activated/deactivated and prints that to the serial port.\n
  */
 void loop() {
   Serial.print("Button: ");
