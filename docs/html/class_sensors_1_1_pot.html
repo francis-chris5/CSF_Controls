@@ -67,6 +67,8 @@ Inheritance diagram for Sensors::Pot:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1545e15a666875f9f45d6c1cdec250bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensors_1_1_pot.html#a1545e15a666875f9f45d6c1cdec250bf">Pot</a> (int but, int lin, int sig)</td></tr>
 <tr class="separator:a1545e15a666875f9f45d6c1cdec250bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fcd140ad2bc751eac5437af68640d0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensors_1_1_pot.html#a2fcd140ad2bc751eac5437af68640d0d">Pot</a> (int but, int lin, int sig, int val)</td></tr>
+<tr class="separator:a2fcd140ad2bc751eac5437af68640d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adff190f048f55cd4344f43d4c0270c54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensors_1_1_pot.html#adff190f048f55cd4344f43d4c0270c54">begin</a> (void)</td></tr>
 <tr class="separator:adff190f048f55cd4344f43d4c0270c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0acfe00e1bca8d303dcbcf8eb21dace"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensors_1_1_pot.html#ac0acfe00e1bca8d303dcbcf8eb21dace">getSensorValue</a> (void)</td></tr>
@@ -96,18 +98,20 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a9573f455269c64b901cb76cc03c897af"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensors_1_1_pot.html#a9573f455269c64b901cb76cc03c897af">mappingMode</a></td></tr>
+<tr class="memdesc:a9573f455269c64b901cb76cc03c897af"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the <a class="el" href="class_sensors_1_1_pot.html#af9cc721b31e951ce10a23d9200dbae0a">mapData()</a> function has been called this will be track whether it should be an int or a float for <a class="el" href="class_sensors_1_1_pot.html#a9ab2b1f1cef0f30c6125989cc9c6985b">toSerial()</a> with the same range.<br  />
+ 0 is unmapped, 1 is int, 2 is float.  <a href="class_sensors_1_1_pot.html#a9573f455269c64b901cb76cc03c897af">More...</a><br /></td></tr>
 <tr class="separator:a9573f455269c64b901cb76cc03c897af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdb93f76c4f8c8fcc11b26c6a9cdd10f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensors_1_1_pot.html#abdb93f76c4f8c8fcc11b26c6a9cdd10f">minValueInt</a></td></tr>
-<tr class="memdesc:abdb93f76c4f8c8fcc11b26c6a9cdd10f"><td class="mdescLeft">&#160;</td><td class="mdescRight">String to hold the mapped data from the sensor.  <a href="class_sensors_1_1_pot.html#abdb93f76c4f8c8fcc11b26c6a9cdd10f">More...</a><br /></td></tr>
+<tr class="memdesc:abdb93f76c4f8c8fcc11b26c6a9cdd10f"><td class="mdescLeft">&#160;</td><td class="mdescRight">hold the mapped data from the sensor  <a href="class_sensors_1_1_pot.html#abdb93f76c4f8c8fcc11b26c6a9cdd10f">More...</a><br /></td></tr>
 <tr class="separator:abdb93f76c4f8c8fcc11b26c6a9cdd10f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76a1565a86fc0df28725be76aa35ad67"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensors_1_1_pot.html#a76a1565a86fc0df28725be76aa35ad67">maxValueInt</a></td></tr>
-<tr class="memdesc:a76a1565a86fc0df28725be76aa35ad67"><td class="mdescLeft">&#160;</td><td class="mdescRight">String to hold the mapped data from the sensor.  <a href="class_sensors_1_1_pot.html#a76a1565a86fc0df28725be76aa35ad67">More...</a><br /></td></tr>
+<tr class="memdesc:a76a1565a86fc0df28725be76aa35ad67"><td class="mdescLeft">&#160;</td><td class="mdescRight">hold the mapped data from the sensor  <a href="class_sensors_1_1_pot.html#a76a1565a86fc0df28725be76aa35ad67">More...</a><br /></td></tr>
 <tr class="separator:a76a1565a86fc0df28725be76aa35ad67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06b60bacbddd7d9eb80576e483a930d8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensors_1_1_pot.html#a06b60bacbddd7d9eb80576e483a930d8">minValueFloat</a></td></tr>
-<tr class="memdesc:a06b60bacbddd7d9eb80576e483a930d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">String to hold the mapped data from the sensor.  <a href="class_sensors_1_1_pot.html#a06b60bacbddd7d9eb80576e483a930d8">More...</a><br /></td></tr>
+<tr class="memdesc:a06b60bacbddd7d9eb80576e483a930d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">hold the mapped data from the sensor  <a href="class_sensors_1_1_pot.html#a06b60bacbddd7d9eb80576e483a930d8">More...</a><br /></td></tr>
 <tr class="separator:a06b60bacbddd7d9eb80576e483a930d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf9a27b78c5422ceecd2dd22ea7e586b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensors_1_1_pot.html#abf9a27b78c5422ceecd2dd22ea7e586b">maxValueFloat</a></td></tr>
-<tr class="memdesc:abf9a27b78c5422ceecd2dd22ea7e586b"><td class="mdescLeft">&#160;</td><td class="mdescRight">String to hold the mapped data from the sensor.  <a href="class_sensors_1_1_pot.html#abf9a27b78c5422ceecd2dd22ea7e586b">More...</a><br /></td></tr>
+<tr class="memdesc:abf9a27b78c5422ceecd2dd22ea7e586b"><td class="mdescLeft">&#160;</td><td class="mdescRight">hold the mapped data from the sensor  <a href="class_sensors_1_1_pot.html#abf9a27b78c5422ceecd2dd22ea7e586b">More...</a><br /></td></tr>
 <tr class="separator:abf9a27b78c5422ceecd2dd22ea7e586b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_sensors_1_1_control_unit"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_sensors_1_1_control_unit')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_sensors_1_1_control_unit.html">Sensors::ControlUnit</a></td></tr>
 <tr class="memitem:a76f270f5a84f5fc6fa5be11d0c8121db inherit pro_attribs_class_sensors_1_1_control_unit"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensors_1_1_control_unit.html#a76f270f5a84f5fc6fa5be11d0c8121db">isSensorOn</a></td></tr>
@@ -130,12 +134,15 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:af6a28e0c18ef1c97310167fc966e38ab inherit pro_attribs_class_sensors_1_1_control_unit"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The <a class="el" href="class_sensors_1_1_pot.html">Pot</a> class is for potentiometer input to an arduino, I use it for both rotary and sliding potentiometers.<br  />
+<div class="textblock"><p>The <a class="el" href="class_sensors_1_1_pot.html">Pot</a> class is for potentiometer input to an Arduino, I use it for both rotary and sliding potentiometers.<br  />
 I also usually include a Power-Indicator-LED with each particular sensor, so the power-line variable actually activates a NPN transistor to supply the VCC voltage to both the LED and Potentiometer from the +5V or +3.3V rail.<br  />
+Here is the prototype of the Rotary-Pot-Module to go with classes in this library. I wasn't about to pay a fortune in shipping for ten of these so I have to wait a month on the PCB's to arrive from China, so it'll be a while before pictures can be taken of the final versions. The thought of smaller and smaller electronics is nice, but I like the size of these controls with my chubby-stubby-northern-european-ancestory fingers when mocking up ideas so the Pot-Module-R Gerber files don't include components, just holes for them to go in and I plan to solder the full size components in myself, but might as well share those here too, if you want to update a copy of the gerber file most any factory wouldn't have any trouble stamping these parts on there for you.<br  />
+<img src="../images/pot_circuit.PNG" alt="" class="inline"/> <img src="../images/tactile_button_circuit.PNG" alt="" class="inline"/><br  />
+<img src="../images/pot_prototype_1_a.jpg" alt="" width="150" height="200" class="inline"/> <img src="../images/pot_prototype_1_b.jpg" alt="" width="150" height="200" class="inline"/> <img src="../images/PCB_Rotary Pot Module Traces.PNG" alt="" width="200" height="200" class="inline"/> <a href="../pcb/Gerber_Rotary Pot Module.zip">Download Gerber Files for Pot-Module-R</a><br  />
 </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1545e15a666875f9f45d6c1cdec250bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1545e15a666875f9f45d6c1cdec250bf">&#9670;&nbsp;</a></span>Pot()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1545e15a666875f9f45d6c1cdec250bf">&#9670;&nbsp;</a></span>Pot() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -179,6 +186,64 @@ I also usually include a Power-Indicator-LED with each particular sensor, so the
     <tr><td class="paramname">but</td><td>-the power button connected to the sensor </td></tr>
     <tr><td class="paramname">lin</td><td>-the power line coming from the Arduino </td></tr>
     <tr><td class="paramname">sig</td><td>-the Arduino pin the sensor signal will be sent to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2fcd140ad2bc751eac5437af68640d0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fcd140ad2bc751eac5437af68640d0d">&#9670;&nbsp;</a></span>Pot() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sensors::Pot::Pot </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>but</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The constructor for the sensor.<br  />
+</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">but</td><td>-the power button connected to the sensor </td></tr>
+    <tr><td class="paramname">lin</td><td>-the power line coming from the Arduino </td></tr>
+    <tr><td class="paramname">sig</td><td>-the Arduino pin the sensor signal will be sent to </td></tr>
+    <tr><td class="paramname">val</td><td>-the reuired time interval that must pass between registering button clicks -in milliseconds </td></tr>
   </table>
   </dd>
 </dl>
@@ -239,7 +304,7 @@ Call this method in the <a class="el" href="button__example_8ino.html#a4fc01d736
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Gets the current value of this control's sensor, this method is called from the .ino file as an argument in Serial.println(this) to send the data to Blender</p>
+<p>Gets the current value of this control's sensor</p>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
 <p>Implements <a class="el" href="class_sensors_1_1_control_unit.html#af4b6ab751d3d6919b11e80edf4c4926d">Sensors::ControlUnit</a>.</p>
@@ -372,6 +437,9 @@ This method is encapsulates sending the sensor data to the serial port for that 
 </table>
 </div><div class="memdoc">
 
+<p>If the <a class="el" href="class_sensors_1_1_pot.html#af9cc721b31e951ce10a23d9200dbae0a">mapData()</a> function has been called this will be track whether it should be an int or a float for <a class="el" href="class_sensors_1_1_pot.html#a9ab2b1f1cef0f30c6125989cc9c6985b">toSerial()</a> with the same range.<br  />
+ 0 is unmapped, 1 is int, 2 is float. </p>
+
 </div>
 </div>
 <a id="abf9a27b78c5422ceecd2dd22ea7e586b"></a>
@@ -394,7 +462,7 @@ This method is encapsulates sending the sensor data to the serial port for that 
 </table>
 </div><div class="memdoc">
 
-<p>String to hold the mapped data from the sensor. </p>
+<p>hold the mapped data from the sensor </p>
 
 </div>
 </div>
@@ -418,7 +486,7 @@ This method is encapsulates sending the sensor data to the serial port for that 
 </table>
 </div><div class="memdoc">
 
-<p>String to hold the mapped data from the sensor. </p>
+<p>hold the mapped data from the sensor </p>
 
 </div>
 </div>
@@ -442,7 +510,7 @@ This method is encapsulates sending the sensor data to the serial port for that 
 </table>
 </div><div class="memdoc">
 
-<p>String to hold the mapped data from the sensor. </p>
+<p>hold the mapped data from the sensor </p>
 
 </div>
 </div>
@@ -466,13 +534,13 @@ This method is encapsulates sending the sensor data to the serial port for that 
 </table>
 </div><div class="memdoc">
 
-<p>String to hold the mapped data from the sensor. </p>
+<p>hold the mapped data from the sensor </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/Chris/Documents/random stuff/CSF_Controls/CSF_Controls/CSF_Controls/<a class="el" href="_c_s_f___controls_8h_source.html">CSF_Controls.h</a></li>
-<li>C:/Users/Chris/Documents/random stuff/CSF_Controls/CSF_Controls/CSF_Controls/<a class="el" href="_c_s_f___controls_8cpp.html">CSF_Controls.cpp</a></li>
+<li>C:/Users/Chris/Documents/Arduino/libraries/CSF_Controls/<a class="el" href="_c_s_f___controls_8h_source.html">CSF_Controls.h</a></li>
+<li>C:/Users/Chris/Documents/Arduino/libraries/CSF_Controls/<a class="el" href="_c_s_f___controls_8cpp.html">CSF_Controls.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -39,7 +39,7 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_b717cc4be1475578c80d3625a596a1d1.html">CSF_Controls</a></li><li class="navelem"><a class="el" href="dir_4f5b09888e70a55fe412ae791b9245a7.html">examples</a></li><li class="navelem"><a class="el" href="dir_4469820589949ab668a982766884e28f.html">to_computer_example</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_65fde2238b93441f0508551bf78a6f84.html">CSF_Controls</a></li><li class="navelem"><a class="el" href="dir_4420a7eddf79c66f8acdda9e5c7a2477.html">examples</a></li><li class="navelem"><a class="el" href="dir_44a2b411efd3ca1710b0b1c571956dbd.html">to_computer_example</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -66,16 +66,18 @@ Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:aa1904af6be2b98edce253fa2a7395e52"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="to__computer__example_8ino.html#aa1904af6be2b98edce253fa2a7395e52">pcCommand</a> = &quot;&quot;</td></tr>
+<tr class="memdesc:aa1904af6be2b98edce253fa2a7395e52"><td class="mdescLeft">&#160;</td><td class="mdescRight">The string holding the serial communication input coming from the computer.  <a href="to__computer__example_8ino.html#aa1904af6be2b98edce253fa2a7395e52">More...</a><br /></td></tr>
 <tr class="separator:aa1904af6be2b98edce253fa2a7395e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a361454c446e4e8a12f8c9c5daa5a1b5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sensors_1_1_pot.html">Pot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="to__computer__example_8ino.html#a361454c446e4e8a12f8c9c5daa5a1b5c">rotary</a> = <a class="el" href="class_sensors_1_1_pot.html">Pot</a>(2, 3, A0)</td></tr>
 <tr class="memdesc:a361454c446e4e8a12f8c9c5daa5a1b5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object representing the rotary potentiometer and associated components<br  />
- This will be used to control the x value of the mouse.  <a href="to__computer__example_8ino.html#a361454c446e4e8a12f8c9c5daa5a1b5c">More...</a><br /></td></tr>
+ This will be used to control the y value of the mouse.  <a href="to__computer__example_8ino.html#a361454c446e4e8a12f8c9c5daa5a1b5c">More...</a><br /></td></tr>
 <tr class="separator:a361454c446e4e8a12f8c9c5daa5a1b5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a084d3c3b87ed15d0f4172852bcf83da2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sensors_1_1_pot.html">Pot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="to__computer__example_8ino.html#a084d3c3b87ed15d0f4172852bcf83da2">slider</a> = <a class="el" href="class_sensors_1_1_pot.html">Pot</a>(5, 6, A2)</td></tr>
 <tr class="memdesc:a084d3c3b87ed15d0f4172852bcf83da2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object representing the slide potentiometer and associated components<br  />
- This will be used to control the y value of the mouse.  <a href="to__computer__example_8ino.html#a084d3c3b87ed15d0f4172852bcf83da2">More...</a><br /></td></tr>
+ This will be used to control the x value of the mouse.  <a href="to__computer__example_8ino.html#a084d3c3b87ed15d0f4172852bcf83da2">More...</a><br /></td></tr>
 <tr class="separator:a084d3c3b87ed15d0f4172852bcf83da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6209889b4b645702989fb2ab6c72bb48"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="to__computer__example_8ino.html#a6209889b4b645702989fb2ab6c72bb48">firstPass</a> = 1</td></tr>
+<tr class="memdesc:a6209889b4b645702989fb2ab6c72bb48"><td class="mdescLeft">&#160;</td><td class="mdescRight">This could probably go in the setup, but I tend to program the setup - first pass through loop - then the repitive stuff.  <a href="to__computer__example_8ino.html#a6209889b4b645702989fb2ab6c72bb48">More...</a><br /></td></tr>
 <tr class="separator:a6209889b4b645702989fb2ab6c72bb48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -140,8 +142,9 @@ The circuit used for this is pictured below: (see documentation for library for 
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The standard <a class="el" href="to__computer__example_8ino.html#afe461d27b9c48d5921c00d521181f12f">loop()</a> method for Arduinon On the first pass through the loop it maps the potentiometers to values in the range a mouse would move<br  />
-Then it checks for serial commands coming from the computer </p>
+<p>The standard <a class="el" href="to__computer__example_8ino.html#afe461d27b9c48d5921c00d521181f12f">loop()</a> method for Arduino<br  />
+On the first pass through the loop it maps the potentiometers to values in the range a mouse would move<br  />
+Then it checks for serial commands coming from the computer over and over again </p>
 
 </div>
 </div>
@@ -159,7 +162,7 @@ Then it checks for serial commands coming from the computer </p>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The standard <a class="el" href="to__computer__example_8ino.html#a4fc01d736fe50cf5b977f755b675f11d">setup()</a> method for arduino<br  />
+<p>The standard <a class="el" href="to__computer__example_8ino.html#a4fc01d736fe50cf5b977f755b675f11d">setup()</a> method for Arduino<br  />
 For this example it intializes the serial communication port and initializes the Pot objects </p>
 
 </div>
@@ -177,6 +180,8 @@ For this example it intializes the serial communication port and initializes the
       </table>
 </div><div class="memdoc">
 
+<p>This could probably go in the setup, but I tend to program the setup - first pass through loop - then the repitive stuff. </p>
+
 </div>
 </div>
 <a id="aa1904af6be2b98edce253fa2a7395e52"></a>
@@ -190,6 +195,8 @@ For this example it intializes the serial communication port and initializes the
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The string holding the serial communication input coming from the computer. </p>
 
 </div>
 </div>
@@ -206,7 +213,7 @@ For this example it intializes the serial communication port and initializes the
 </div><div class="memdoc">
 
 <p>Object representing the rotary potentiometer and associated components<br  />
- This will be used to control the x value of the mouse. </p>
+ This will be used to control the y value of the mouse. </p>
 
 </div>
 </div>
@@ -223,7 +230,7 @@ For this example it intializes the serial communication port and initializes the
 </div><div class="memdoc">
 
 <p>Object representing the slide potentiometer and associated components<br  />
- This will be used to control the y value of the mouse. </p>
+ This will be used to control the x value of the mouse. </p>
 
 </div>
 </div>

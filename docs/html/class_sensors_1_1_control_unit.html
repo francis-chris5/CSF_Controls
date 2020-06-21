@@ -112,7 +112,7 @@ Protected Attributes</h2></td></tr>
 Summary</h1>
 <p><a class="el" href="class_sensors_1_1_control_unit.html">ControlUnit</a> is the parent class for sensor controls.<br  />
 Each "Control" typically consists of a tactile-momentary-switch or capacitive touch-sensor for a power button, a power indicator LED, and a sensor to input the control data<br  />
-<img src="../images/pot_circuit.PNG" alt="" class="inline"/> <img src="../images/tactile_button_circuit.PNG" alt="" class="inline"/> </p>
+</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a14d02adf26c032ccbc0bf02281a47a3c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a14d02adf26c032ccbc0bf02281a47a3c">&#9670;&nbsp;</a></span>ControlUnit() <span class="overload">[1/2]</span></h2>
@@ -319,7 +319,7 @@ Call this method in the <a class="el" href="button__example_8ino.html#a4fc01d736
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Gets the current value of this control's sensor, this method is called from the .ino file as an argument in Serial.println(this) to send the data to Blender</p>
+<p>Gets the current value of this control's sensor</p>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
 <p>Implemented in <a class="el" href="class_sensors_1_1_pot.html#ac0acfe00e1bca8d303dcbcf8eb21dace">Sensors::Pot</a>.</p>
@@ -341,7 +341,7 @@ Call this method in the <a class="el" href="button__example_8ino.html#a4fc01d736
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Called internally when the Activation Button for this control on the Main-Unit is pressed<br  />
+<p>Called when ready to check if the Activation Button for this control is currently being pressed (I chose not to put interupts in this library)<br  />
 Place in <a class="el" href="button__example_8ino.html#afe461d27b9c48d5921c00d521181f12f">loop()</a> somewhere to determine if the power button for this control is currently being pressed </p>
 
 </div>
@@ -542,8 +542,8 @@ This method is encapsulates sending the sensor data to the serial port for that 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/Chris/Documents/random stuff/CSF_Controls/CSF_Controls/CSF_Controls/<a class="el" href="_c_s_f___controls_8h_source.html">CSF_Controls.h</a></li>
-<li>C:/Users/Chris/Documents/random stuff/CSF_Controls/CSF_Controls/CSF_Controls/<a class="el" href="_c_s_f___controls_8cpp.html">CSF_Controls.cpp</a></li>
+<li>C:/Users/Chris/Documents/Arduino/libraries/CSF_Controls/<a class="el" href="_c_s_f___controls_8h_source.html">CSF_Controls.h</a></li>
+<li>C:/Users/Chris/Documents/Arduino/libraries/CSF_Controls/<a class="el" href="_c_s_f___controls_8cpp.html">CSF_Controls.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
