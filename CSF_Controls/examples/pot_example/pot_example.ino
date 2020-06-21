@@ -31,7 +31,7 @@ void setup() {
 
 
 /**
- * The standard loop\(\) method for Arduinon
+ * The standard loop\(\) method for Arduino\n
  * Here it checks if the sensor needs activated/deactivated, and if it's on prints the values to the serial port and a couple blank lines.
  */
 void loop() {

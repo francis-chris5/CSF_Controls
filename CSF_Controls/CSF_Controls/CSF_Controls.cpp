@@ -113,17 +113,32 @@ int Pot::mapData(int min, int max){
 void Pot::toSerial(){
 		//check type of mapped data
 	if(mappingMode == 0){
-		Serial.println(getSensorValue());
+		if(isSensorOn){
+			Serial.println(getSensorValue());
+		}
+		else{
+			Serial.println(0);
+		}
 	}
 	else if(mappingMode == 1){
 		//it's an integer
-		int output = mapData(minValueInt, maxValueInt);
-		Serial.println(output);
+		if(isSensorOn){
+			int output = mapData(minValueInt, maxValueInt);
+			Serial.println(output);
+		}
+		else{
+			Serial.println(0);
+		}
 	}
 	else if(mappingMode == 2){
 		//it's a float
-		float output = mapData(minValueFloat, maxValueFloat);
-		Serial.println(output);
+		if(isSensorOn){
+			float output = mapData(minValueFloat, maxValueFloat);
+			Serial.println(output);
+		}
+		else{
+			Serial.println(0.0);
+		}
 	}
 }//end toSerial()
 
@@ -190,17 +205,6 @@ int Momentary::getState(bool condition){
 	}
 }//end getState(bool)
 
-/*
-void Momentary::toSerial(){
-	Serial.println(getState());
-}//end toSerial()
-
-
-void Momentary::toSerial(bool condition){
-	Serial.println(getState(condition));
-}//end toSerial(bool);
-*/
-
 
 
 
@@ -228,15 +232,4 @@ int Touch::getState(bool condition){
 }//end getState(bool)
 
 
-
-/*
-void Touch::toSerial(){
-	Serial.println(getState());
-}//end toSerial()
-
-
-void Touch::toSerial(bool condition){
-	Serial.println(getState(condition));
-}//end toSerial(bool);
-*/
 
