@@ -125,7 +125,11 @@ namespace Sensors{
 	 * <IMG src="../images/pot_prototype_1_a.jpg" width="150" height="200">
 	 * <IMG src="../images/pot_prototype_1_b.jpg" width="150" height="200">
 	 * <IMG src="../images/PCB_Rotary Pot Module Traces.PNG" width="200" height="200">
-	 * <A href="../pcb/Gerber_Rotary Pot Module.zip"> Download Gerber Files for Pot-Module-R</A>\n
+	 * <A href="../pcb/Gerber_Rotary Pot Module.zip"> Download Gerber Files for Pot-Module-R</A>\n\n
+	 * <IMG src="../images/pot_prototype_2_a.jpg" width="150" height="200">
+	 * <IMG src="../images/pot_prototype_2_b.jpg" width="150" height="200">
+	 * <IMG src="../images/PCB_Slider Pot Module Traces.PNG" width="200" height="200">
+	 * <A href="../pcb/Gerber_Slider Pot Module.zip"> Download Gerber Files for Pot-Module-S</A>\n
 	 */
 	class Pot: public ControlUnit{
 		public:
