@@ -46,7 +46,7 @@ namespace Sensors{
 			 * @param but -the power button connected to the sensor
 			 * @param lin -the power line coming from the Arduino
 			 * @param sig -the Arduino pin the sensor signal will be sent to
-			 * @param val -the reuired time interval that must pass between registering button clicks -in milliseconds
+			 * @param val -the required time interval that must pass between registering button clicks -in milliseconds
 			 */
 			ControlUnit(int but, int lin, int sig, int val);
 			
@@ -124,12 +124,16 @@ namespace Sensors{
 	 * <IMG src="../images/tactile_button_circuit.PNG">\n
 	 * <IMG src="../images/pot_prototype_1_a.jpg" width="150" height="200">
 	 * <IMG src="../images/pot_prototype_1_b.jpg" width="150" height="200">
-	 * <IMG src="../images/PCB_Rotary Pot Module Traces.PNG" width="200" height="200">
 	 * <A href="../pcb/Gerber_Rotary Pot Module.zip"> Download Gerber Files for Pot-Module-R</A>\n\n
 	 * <IMG src="../images/pot_prototype_2_a.jpg" width="150" height="200">
 	 * <IMG src="../images/pot_prototype_2_b.jpg" width="150" height="200">
-	 * <IMG src="../images/PCB_Slider Pot Module Traces.PNG" width="200" height="200">
 	 * <A href="../pcb/Gerber_Slider Pot Module.zip"> Download Gerber Files for Pot-Module-S</A>\n
+	 * @htmlonly
+	 * <iframe src="../pcb/pcb_rotary.html" width="700" height="300">
+	 * </iframe>
+	 <iframe src="../pcb/pcb_slider.html" width="700" height="400">
+	 * </iframe>
+	 * @endhtmlonly
 	 */
 	class Pot: public ControlUnit{
 		public:
@@ -319,7 +323,7 @@ namespace Switches{
 			 * see getState\(\) about the overloading
 			 */
 			//void toSerial(bool condition);
-		private:
+		protected:
 			long interval;	///< The amount of time to wait between checking presses of buttons
 			long previousTime;	///< The unix epoch timestamp on last pass of the program's main loop
 	};
@@ -370,7 +374,7 @@ namespace Switches{
 			 * see getState\(\) about the overloading
 			 */
 			//void toSerial(bool condition);
-		private:
+		protected:
 			long interval;	///< The amount of time to wait between checking presses of buttons
 			long previousTime;	///< The unix epoch timestamp on last pass of the program's main loop
 	};
