@@ -45,6 +45,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_switches_1_1_touch-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Switches::Touch Class Reference</div>  </div>
@@ -84,8 +85,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a10232c09663f41562ef44ca5d2c05c87 inherit pub_methods_class_switches_1_1_button"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switches_1_1_button.html#a10232c09663f41562ef44ca5d2c05c87">toSerial</a> (bool condition)</td></tr>
 <tr class="separator:a10232c09663f41562ef44ca5d2c05c87 inherit pub_methods_class_switches_1_1_button"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:af6c2a8836247eff1128b4c850f0a1db8"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switches_1_1_touch.html#af6c2a8836247eff1128b4c850f0a1db8">interval</a></td></tr>
+<tr class="memdesc:af6c2a8836247eff1128b4c850f0a1db8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The amount of time to wait between checking presses of buttons.  <a href="class_switches_1_1_touch.html#af6c2a8836247eff1128b4c850f0a1db8">More...</a><br /></td></tr>
+<tr class="separator:af6c2a8836247eff1128b4c850f0a1db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5277af4920cf6821c8d3b23ebb491b2"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switches_1_1_touch.html#aa5277af4920cf6821c8d3b23ebb491b2">previousTime</a></td></tr>
+<tr class="memdesc:aa5277af4920cf6821c8d3b23ebb491b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unix epoch timestamp on last pass of the program's main loop.  <a href="class_switches_1_1_touch.html#aa5277af4920cf6821c8d3b23ebb491b2">More...</a><br /></td></tr>
+<tr class="separator:aa5277af4920cf6821c8d3b23ebb491b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_switches_1_1_button"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_switches_1_1_button')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_switches_1_1_button.html">Switches::Button</a></td></tr>
 <tr class="memitem:abb4d99fbdb17576b402a0b162a745ade inherit pro_attribs_class_switches_1_1_button"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switches_1_1_button.html#abb4d99fbdb17576b402a0b162a745ade">pin</a></td></tr>
 <tr class="memdesc:abb4d99fbdb17576b402a0b162a745ade inherit pro_attribs_class_switches_1_1_button"><td class="mdescLeft">&#160;</td><td class="mdescRight">The arduino pin the button/touch-sensor is connected to.  <a href="class_switches_1_1_button.html#abb4d99fbdb17576b402a0b162a745ade">More...</a><br /></td></tr>
@@ -168,6 +175,60 @@ This is what I use this with the prebuilt capacitive touch sensor modules, and n
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int -a 1 if currently being pressed/touched, and 0 otherwise </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af6c2a8836247eff1128b4c850f0a1db8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6c2a8836247eff1128b4c850f0a1db8">&#9670;&nbsp;</a></span>interval</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long Switches::Touch::interval</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The amount of time to wait between checking presses of buttons. </p>
+<p>I often find my ideas for Arduino projects are input devices (essentially a customized keyboard or mouse override) for software running on my PC. This is typically handled with bits of code written in python making use of the libraries pyserial and pyautogui.<br  />
+This method is encapsulates sending the data to the serial port for that purpose, in this case it sends a true/false value to represent whether the button is currently activated (pressed or touched, etc.) or not.<br  />
+see <a class="el" href="class_switches_1_1_touch.html#abe25dfd5bdc486abbecd7d0b107d9b2f">getState()</a> about the overloading I often find my ideas for Arduino projects are input devices (essentially a customized keyboard or mouse override) for software running on my PC. This is typically handled with bits of code written in python making use of the libraries pyserial and pyautogui.<br  />
+This method is encapsulates sending the data to the serial port for that purpose, in this case it sends a true/false value to represent whether the button is currently activated (pressed or touched, etc.) or not.<br  />
+see <a class="el" href="class_switches_1_1_touch.html#abe25dfd5bdc486abbecd7d0b107d9b2f">getState()</a> about the overloading </p>
+
+</div>
+</div>
+<a id="aa5277af4920cf6821c8d3b23ebb491b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5277af4920cf6821c8d3b23ebb491b2">&#9670;&nbsp;</a></span>previousTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long Switches::Touch::previousTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The unix epoch timestamp on last pass of the program's main loop. </p>
 
 </div>
 </div>
