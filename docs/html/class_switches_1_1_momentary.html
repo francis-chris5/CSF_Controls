@@ -67,6 +67,8 @@ Inheritance diagram for Switches::Momentary:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ade1fe59c829eb0144d662d640ee9eb34"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switches_1_1_momentary.html#ade1fe59c829eb0144d662d640ee9eb34">Momentary</a> (int p)</td></tr>
 <tr class="separator:ade1fe59c829eb0144d662d640ee9eb34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d7f4e66c7be3a5e9acd936f32c650be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switches_1_1_momentary.html#a9d7f4e66c7be3a5e9acd936f32c650be">Momentary</a> (int p, int val)</td></tr>
+<tr class="separator:a9d7f4e66c7be3a5e9acd936f32c650be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bc1b56f2bb1ce042e11c80028d99df5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switches_1_1_momentary.html#a3bc1b56f2bb1ce042e11c80028d99df5">getState</a> ()</td></tr>
 <tr class="separator:a3bc1b56f2bb1ce042e11c80028d99df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa88bd0aac56c83ddde1aa22268dadf69"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switches_1_1_momentary.html#aa88bd0aac56c83ddde1aa22268dadf69">getState</a> (bool condition)</td></tr>
@@ -87,9 +89,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a67efb2a632187de4aab2337958590e40"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switches_1_1_momentary.html#a67efb2a632187de4aab2337958590e40">interval</a></td></tr>
-<tr class="memdesc:a67efb2a632187de4aab2337958590e40"><td class="mdescLeft">&#160;</td><td class="mdescRight">The amount of time to wait between checking presses of buttons.  <a href="class_switches_1_1_momentary.html#a67efb2a632187de4aab2337958590e40">More...</a><br /></td></tr>
-<tr class="separator:a67efb2a632187de4aab2337958590e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7079679036eecd9608b29e2655ebbf9d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switches_1_1_momentary.html#a7079679036eecd9608b29e2655ebbf9d">interval</a></td></tr>
+<tr class="memdesc:a7079679036eecd9608b29e2655ebbf9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The amount of time to wait between checking presses of buttons.  <a href="class_switches_1_1_momentary.html#a7079679036eecd9608b29e2655ebbf9d">More...</a><br /></td></tr>
+<tr class="separator:a7079679036eecd9608b29e2655ebbf9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdef423dfe67e8fd58c6fef89787dabc"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switches_1_1_momentary.html#acdef423dfe67e8fd58c6fef89787dabc">previousTime</a></td></tr>
 <tr class="memdesc:acdef423dfe67e8fd58c6fef89787dabc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unix epoch timestamp on last pass of the program's main loop.  <a href="class_switches_1_1_momentary.html#acdef423dfe67e8fd58c6fef89787dabc">More...</a><br /></td></tr>
 <tr class="separator:acdef423dfe67e8fd58c6fef89787dabc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -103,7 +105,7 @@ Protected Attributes</h2></td></tr>
 <img src="../images/tactile_button_circuit.png" alt="" class="inline"/> </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ade1fe59c829eb0144d662d640ee9eb34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade1fe59c829eb0144d662d640ee9eb34">&#9670;&nbsp;</a></span>Momentary()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ade1fe59c829eb0144d662d640ee9eb34">&#9670;&nbsp;</a></span>Momentary() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -128,6 +130,49 @@ Protected Attributes</h2></td></tr>
 <p>The constructor for <a class="el" href="class_switches_1_1_momentary.html">Momentary</a> objects. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p</td><td>-the Arduino pin the signal from the tactile-momentary-switch will be received on </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9d7f4e66c7be3a5e9acd936f32c650be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d7f4e66c7be3a5e9acd936f32c650be">&#9670;&nbsp;</a></span>Momentary() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Switches::Momentary::Momentary </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The constructor for <a class="el" href="class_switches_1_1_momentary.html">Momentary</a> objects. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>-the Arduino pin the signal from the tactile-momentary-switch will be received on </td></tr>
+    <tr><td class="paramname">val</td><td>-the time interval in milliseconds that must pass between reading the state of the button </td></tr>
   </table>
   </dd>
 </dl>
@@ -179,8 +224,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a67efb2a632187de4aab2337958590e40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67efb2a632187de4aab2337958590e40">&#9670;&nbsp;</a></span>interval</h2>
+<a id="a7079679036eecd9608b29e2655ebbf9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7079679036eecd9608b29e2655ebbf9d">&#9670;&nbsp;</a></span>interval</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,7 +234,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long Switches::Momentary::interval</td>
+          <td class="memname">int Switches::Momentary::interval</td>
         </tr>
       </table>
   </td>
@@ -200,11 +245,6 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The amount of time to wait between checking presses of buttons. </p>
-<p>I often find my ideas for Arduino projects are input devices (essentially a customized keyboard or mouse override) for software running on my PC. This is typically handled with bits of code written in python making use of the libraries pyserial and pyautogui.<br  />
-This method is encapsulates sending the data to the serial port for that purpose, in this case it sends a true/false value to represent whether the button is currently activated (pressed or touched, etc.) or not.<br  />
-see <a class="el" href="class_switches_1_1_momentary.html#a3bc1b56f2bb1ce042e11c80028d99df5">getState()</a> about the overloading I often find my ideas for Arduino projects are input devices (essentially a customized keyboard or mouse override) for software running on my PC. This is typically handled with bits of code written in python making use of the libraries pyserial and pyautogui.<br  />
-This method is encapsulates sending the data to the serial port for that purpose, in this case it sends a true/false value to represent whether the button is currently activated (pressed or touched, etc.) or not.<br  />
-see <a class="el" href="class_switches_1_1_momentary.html#a3bc1b56f2bb1ce042e11c80028d99df5">getState()</a> about the overloading </p>
 
 </div>
 </div>

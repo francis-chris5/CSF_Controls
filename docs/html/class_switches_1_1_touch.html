@@ -67,6 +67,8 @@ Inheritance diagram for Switches::Touch:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4e54106d27f18ac0b63f0513c8680a5e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switches_1_1_touch.html#a4e54106d27f18ac0b63f0513c8680a5e">Touch</a> (int p)</td></tr>
 <tr class="separator:a4e54106d27f18ac0b63f0513c8680a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7da8647aff2305c22f28cc02c7614def"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switches_1_1_touch.html#a7da8647aff2305c22f28cc02c7614def">Touch</a> (int p, int val)</td></tr>
+<tr class="separator:a7da8647aff2305c22f28cc02c7614def"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe25dfd5bdc486abbecd7d0b107d9b2f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switches_1_1_touch.html#abe25dfd5bdc486abbecd7d0b107d9b2f">getState</a> ()</td></tr>
 <tr class="separator:abe25dfd5bdc486abbecd7d0b107d9b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae4493d49ad36af751e409ff7eed6c10"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switches_1_1_touch.html#aae4493d49ad36af751e409ff7eed6c10">getState</a> (bool condition)</td></tr>
@@ -87,9 +89,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:af6c2a8836247eff1128b4c850f0a1db8"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switches_1_1_touch.html#af6c2a8836247eff1128b4c850f0a1db8">interval</a></td></tr>
-<tr class="memdesc:af6c2a8836247eff1128b4c850f0a1db8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The amount of time to wait between checking presses of buttons.  <a href="class_switches_1_1_touch.html#af6c2a8836247eff1128b4c850f0a1db8">More...</a><br /></td></tr>
-<tr class="separator:af6c2a8836247eff1128b4c850f0a1db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe0a1e00081ee79fb252b9c25fe24cd5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switches_1_1_touch.html#afe0a1e00081ee79fb252b9c25fe24cd5">interval</a></td></tr>
+<tr class="memdesc:afe0a1e00081ee79fb252b9c25fe24cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The amount of time to wait between checking presses of buttons.  <a href="class_switches_1_1_touch.html#afe0a1e00081ee79fb252b9c25fe24cd5">More...</a><br /></td></tr>
+<tr class="separator:afe0a1e00081ee79fb252b9c25fe24cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5277af4920cf6821c8d3b23ebb491b2"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switches_1_1_touch.html#aa5277af4920cf6821c8d3b23ebb491b2">previousTime</a></td></tr>
 <tr class="memdesc:aa5277af4920cf6821c8d3b23ebb491b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unix epoch timestamp on last pass of the program's main loop.  <a href="class_switches_1_1_touch.html#aa5277af4920cf6821c8d3b23ebb491b2">More...</a><br /></td></tr>
 <tr class="separator:aa5277af4920cf6821c8d3b23ebb491b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -103,7 +105,7 @@ Protected Attributes</h2></td></tr>
 This is what I use this with the prebuilt capacitive touch sensor modules, and not a custom capacitive touch sensor </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4e54106d27f18ac0b63f0513c8680a5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e54106d27f18ac0b63f0513c8680a5e">&#9670;&nbsp;</a></span>Touch()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e54106d27f18ac0b63f0513c8680a5e">&#9670;&nbsp;</a></span>Touch() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -128,6 +130,49 @@ This is what I use this with the prebuilt capacitive touch sensor modules, and n
 <p>The constructor for <a class="el" href="class_switches_1_1_touch.html">Touch</a> objects. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p</td><td>-the Arduino pin the signal from the capacitive-touch-sensor-module will be received on </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7da8647aff2305c22f28cc02c7614def"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7da8647aff2305c22f28cc02c7614def">&#9670;&nbsp;</a></span>Touch() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Switches::Touch::Touch </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The constructor for <a class="el" href="class_switches_1_1_touch.html">Touch</a> objects. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>-the Arduino pin the signal from the tactile-momentary-switch will be received on </td></tr>
+    <tr><td class="paramname">val</td><td>-the time interval in milliseconds that must pass between reading the state of the tuch sensor </td></tr>
   </table>
   </dd>
 </dl>
@@ -179,8 +224,8 @@ This is what I use this with the prebuilt capacitive touch sensor modules, and n
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="af6c2a8836247eff1128b4c850f0a1db8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6c2a8836247eff1128b4c850f0a1db8">&#9670;&nbsp;</a></span>interval</h2>
+<a id="afe0a1e00081ee79fb252b9c25fe24cd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe0a1e00081ee79fb252b9c25fe24cd5">&#9670;&nbsp;</a></span>interval</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,7 +234,7 @@ This is what I use this with the prebuilt capacitive touch sensor modules, and n
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long Switches::Touch::interval</td>
+          <td class="memname">int Switches::Touch::interval</td>
         </tr>
       </table>
   </td>
@@ -200,11 +245,6 @@ This is what I use this with the prebuilt capacitive touch sensor modules, and n
 </div><div class="memdoc">
 
 <p>The amount of time to wait between checking presses of buttons. </p>
-<p>I often find my ideas for Arduino projects are input devices (essentially a customized keyboard or mouse override) for software running on my PC. This is typically handled with bits of code written in python making use of the libraries pyserial and pyautogui.<br  />
-This method is encapsulates sending the data to the serial port for that purpose, in this case it sends a true/false value to represent whether the button is currently activated (pressed or touched, etc.) or not.<br  />
-see <a class="el" href="class_switches_1_1_touch.html#abe25dfd5bdc486abbecd7d0b107d9b2f">getState()</a> about the overloading I often find my ideas for Arduino projects are input devices (essentially a customized keyboard or mouse override) for software running on my PC. This is typically handled with bits of code written in python making use of the libraries pyserial and pyautogui.<br  />
-This method is encapsulates sending the data to the serial port for that purpose, in this case it sends a true/false value to represent whether the button is currently activated (pressed or touched, etc.) or not.<br  />
-see <a class="el" href="class_switches_1_1_touch.html#abe25dfd5bdc486abbecd7d0b107d9b2f">getState()</a> about the overloading </p>
 
 </div>
 </div>
