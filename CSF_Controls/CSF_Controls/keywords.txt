@@ -6,6 +6,8 @@
 # Datatypes (KEYWORD1)
 #######################################
 
+CSF_Controls	KEYWORD1
+
 Sensors			KEYWORD1
 Switches		KEYWORD1
 
